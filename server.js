@@ -15,11 +15,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/', async (req, res) => {
-    let request = await axios.get('http://www.mocky.io/v2/581335f71000004204abaf83');
-    res.send(request.data);
-});
-
 app.get('/contact/secret/setup', async (req, res) => {
     let request = await axios.get('http://www.mocky.io/v2/581335f71000004204abaf83');
     res.send(request.data);
