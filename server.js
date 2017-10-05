@@ -37,5 +37,3 @@ app.patch('/contact/:id', (req, res) => contact.updateById(req  , res));
 app.listen(port, () => {
     console.log(`running on port ${port}`)
 });
-
-// MONGODB_URI='mongodb://contactsuserdefault:superSecretPassword123@ds147534.mlab.com:47534/contacts' nodemon server.js
