@@ -15,6 +15,10 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/', (req, res) =>{
+    res.send("GET /contact Get all contacts\n GET /contact/:id'Get contact by ID\n DELETE /contact/:id Delete contact by ID\n PUT /contact/:id Update contact\n POST /contact Create new contact\n PATCH /contact/:id Update contact");
+});
+
 app.get('/contact/secret/setup', async (req, res) => {
     let request = await axios.get('http://www.mocky.io/v2/581335f71000004204abaf83');
     res.send(request.data);
